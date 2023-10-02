@@ -1,0 +1,41 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheet.css" />
+    <title>CMS Umbraco</title>
+</head>
+<body>
+
+	<div class="container">
+		<nav class="navbar navbar-expand navbar-light">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Startsida</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/om-mig">Om mig</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/pressmeddelanden">Pressmeddelanden</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/soek">Sök</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/kontakta-mig">Kontakta mig</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+@RenderBody()
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PressReleases>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<h2>@Model.Title</h2>
+<p>@Model.Description</p>
+
+
+<ul>
+    <div class="press-item-list">
+    @foreach (var pressItem in Model.Children<ContentModels.PressItem>())
+    {
+        <div class="press-item">
+            <li>
+                <p>@pressItem.PressItemId</p>
+                <h3>@pressItem.Title</h3>
+                <p>@pressItem.LeadText</p>
+            </li>
+        </div>
+    }
+    </div>
+</ul>

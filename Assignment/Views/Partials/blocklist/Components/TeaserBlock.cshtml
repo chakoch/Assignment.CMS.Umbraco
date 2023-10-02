@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.TeaserBlock)Model.Content;
+}
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <img src="@content.Image.Url()" style="width: 350px; height: auto;" />
+    </div>
+</div>
